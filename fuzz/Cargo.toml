@@ -95,3 +95,9 @@ name = "fuzz_setup_connection_flags"
 path = "fuzz_targets/fuzz_setup_connection_flags.rs"
 test = false
 doc = false
+
+[[bin]]
+name = "fuzz_noise_codec_spec"
+path = "fuzz_targets/fuzz_noise_codec_spec.rs"
+test = false
+doc = false
