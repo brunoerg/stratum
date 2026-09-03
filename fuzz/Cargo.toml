@@ -25,6 +25,8 @@ common_messages_sv2 = { path = "../sv2/subprotocols/common-messages" }
 job_declaration_sv2 = { path = "../sv2/subprotocols/job-declaration" }
 mining_sv2 = {path = "../sv2/subprotocols/mining" }
 template_distribution_sv2 = { path = "../sv2/subprotocols/template-distribution" }
+channels_sv2 = { path = "../sv2/channels-sv2" }
+bitcoin = "0.32.5"
 secp256k1 = { version = "0.28.2", default-features = false, features = ["alloc", "rand"] }
 rand = { version = "0.8.5", default-features = false }
 sv1_api = { path = "../sv1" }
@@ -87,5 +89,23 @@ doc = false
 [[bin]]
 name = "fuzz_sv1_method_parsers"
 path = "fuzz_targets/fuzz_sv1_method_parsers.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "fuzz_setup_connection_flags"
+path = "fuzz_targets/fuzz_setup_connection_flags.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "fuzz_noise_codec_spec"
+path = "fuzz_targets/fuzz_noise_codec_spec.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "fuzz_mining_channel_semantics"
+path = "fuzz_targets/fuzz_mining_channel_semantics.rs"
 test = false
 doc = false
